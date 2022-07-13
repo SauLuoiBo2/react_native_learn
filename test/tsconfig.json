@@ -9,10 +9,11 @@
         "@utils/*": ["./src/utils/*"],
         "@libs/*": ["./src/libs/*"],
         "@assets/*": ["./src/assets/*"],
-        "@config/*": ["./src/config/*"],
+        "@widgets/*": ["./src/widgets/*"],
+        "@configs/*": ["./src/configs/*"],
         "@hooks/*": ["./src/hooks/*"],
         "@components/*": ["./src/components/*"],
-        "@model/*": ["./src/model/*"],
+        "@models/*": ["./src/models/*"],
         "@api/*": ["./src/api/*"]
     } /* A series of entries which re-map imports to lookup locations relative to the 'baseUrl'. */,
     "rootDirs": [
