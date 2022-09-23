@@ -1,4 +1,6 @@
-import {MainDashboard} from '@src/modules';
+// import {MainDashboard} from '@src/modules';
+// import {AppContainer} from './src/routes';
+import {AppContainer} from './src/routes';
 import React from 'react';
 import {SafeAreaView} from 'react-native';
 
@@ -8,7 +10,8 @@ const App = () => {
       {/* <MainLayout />
       <Text>sda</Text>
       <Home /> */}
-      <MainDashboard />
+      {/* <MainDashboard /> */}
+      <AppContainer />
     </SafeAreaView>
   );
 };

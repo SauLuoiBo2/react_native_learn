@@ -1,8 +1,9 @@
 import {SIZES} from '@src/assets/theme/sizes';
 import React from 'react';
 import {Animated, FlatList, StyleSheet, View} from 'react-native';
-import BottomTabsWidget from './widget/BottomTabs.Widget';
-import ContentWidget from './widget/Content.Widget';
+import BottomTabsWidget from '../widget/BottomTabs.Widget';
+import ContentWidget from '../widget/Content.Widget';
+
 // import ContentWidget from './widget/Content.Widget';
 
 type Props = {};

@@ -17,6 +17,7 @@ module.exports = {
           '@models': ['./src/models'],
           '@widgets': ['./src/widgets'],
           '@api': ['./src/api'],
+          '@routes': ['./src/routes'],
         },
         extensions: ['.ios.js', '.android.js', '.js', '.jsx', '.ts', '.json'],
       },
