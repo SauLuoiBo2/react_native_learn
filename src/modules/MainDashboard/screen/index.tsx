@@ -1,4 +1,3 @@
-import {SIZES} from '@src/assets/theme/sizes';
 import React from 'react';
 import {Animated, FlatList, StyleSheet, View} from 'react-native';
 import BottomTabsWidget from '../widget/BottomTabs.Widget';
@@ -24,8 +23,9 @@ export const MainDashboard: React.FC<Props> = () => {
 const styles = StyleSheet.create({
   container: {
     // flexDirection: 'row',
+    marginTop: 40,
     width: '100%',
-    paddingHorizontal: SIZES.padding,
+    // paddingHorizontal: SIZES.padding,
   },
 
   // hello: {

@@ -1,6 +1,7 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import * as AuthScreens from '@src/modules/auth';
+import {screenOptions} from '@src/routes/config';
 
 const Stack = createStackNavigator();
 
@@ -20,7 +21,9 @@ const {LoginScreen, RegisterScreen, StatusScreen, ForgotPasswordScreen} =
 
 export const AuthStack = () => {
   return (
-    <Stack.Navigator initialRouteName={LOGIN_SCREEN}>
+    <Stack.Navigator
+      initialRouteName={LOGIN_SCREEN}
+      screenOptions={screenOptions}>
       <Stack.Screen name={LOGIN_SCREEN} component={LoginScreen} />
       <Stack.Screen name={RESGISTER_SCREEN} component={RegisterScreen} />
       <Stack.Screen

@@ -3,13 +3,14 @@ import React from 'react';
 
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
-import {AuthStack, AppStack} from './stack';
+import {AppStack, AuthStack} from './stack';
+import {screenOptions} from './config';
 
-const Root = createStackNavigator();
+const Stack = createStackNavigator();
 
 export const MAIN_STACK = {
   AUTH_STACK: 'AUTH_STACK',
-  APP_STACK: 'APP_SCREEN',
+  APP_STACK: 'APP_STACK',
 };
 
 const {AUTH_STACK, APP_STACK} = MAIN_STACK;
@@ -17,13 +18,15 @@ const {AUTH_STACK, APP_STACK} = MAIN_STACK;
 export const AppContainer = () => {
   return (
     <NavigationContainer fallback={<Text>Loading ...</Text>}>
-      <Root.Navigator>
-        {false ? (
-          <Root.Screen name={APP_STACK} component={AppStack} />
+      <Stack.Navigator
+        initialRouteName="APP_STACK"
+        screenOptions={screenOptions}>
+        {true ? (
+          <Stack.Screen name={APP_STACK} component={AppStack} />
         ) : (
-          <Root.Screen name={AUTH_STACK} component={AuthStack} />
+          <Stack.Screen name={AUTH_STACK} component={AuthStack} />
         )}
-      </Root.Navigator>
+      </Stack.Navigator>
     </NavigationContainer>
   );
 };
