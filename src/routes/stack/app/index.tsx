@@ -1,6 +1,7 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {MainDashboard} from '@src/modules';
+import {screenOptions} from '@src/routes/config';
 
 const Stack = createStackNavigator();
 
@@ -12,7 +13,9 @@ const {DASHBOARD_SCREEN} = APP_SCREENS;
 
 export const AppStack = () => {
   return (
-    <Stack.Navigator initialRouteName={DASHBOARD_SCREEN}>
+    <Stack.Navigator
+      initialRouteName={DASHBOARD_SCREEN}
+      screenOptions={screenOptions}>
       <Stack.Screen name={DASHBOARD_SCREEN} component={MainDashboard} />
     </Stack.Navigator>
   );
