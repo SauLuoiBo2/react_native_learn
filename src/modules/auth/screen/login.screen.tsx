@@ -1,19 +1,21 @@
+import {MainLayout} from '@src/components';
+import {View, Text} from 'native-base';
 import React from 'react';
-import {Text, View} from 'react-native';
+import {LogoHeader} from '../widget/login';
 
 export interface LoginScreenProps {}
 
 export const LoginScreen: React.FC<LoginScreenProps> = () => {
   return (
-    <View>
-      <Text>Home</Text>
-      <Text>Home</Text>
-      <Text>Home</Text>
-      <Text>Home</Text>
-      <Text>Home</Text>
-      <Text>Home</Text>
-      <Text>Home</Text>
-      <Text>Home</Text>
-    </View>
+    <MainLayout>
+      {/* logo */}
+      <View>
+        <LogoHeader />
+      </View>
+      {/* form */}
+      <View>
+        <Text>form</Text>
+      </View>
+    </MainLayout>
   );
 };

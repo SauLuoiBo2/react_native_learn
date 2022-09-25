@@ -21,7 +21,7 @@ export const AppContainer = () => {
       <Stack.Navigator
         initialRouteName="APP_STACK"
         screenOptions={screenOptions}>
-        {true ? (
+        {false ? (
           <Stack.Screen name={APP_STACK} component={AppStack} />
         ) : (
           <Stack.Screen name={AUTH_STACK} component={AuthStack} />
