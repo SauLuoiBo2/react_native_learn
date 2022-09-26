@@ -1,14 +1,17 @@
 import {IMAGES_URL} from '@src/assets';
 import {Image, Text, View} from 'native-base';
 import React from 'react';
+import {StyleProp, ViewStyle} from 'react-native';
 
-export interface LogoHeaderProps {}
+export interface LogoHeaderProps {
+  containerStyle?: StyleProp<ViewStyle>;
+}
 
 const {logos} = IMAGES_URL;
 
-export const LogoHeader: React.FC<LogoHeaderProps> = () => {
+export const LogoHeader: React.FC<LogoHeaderProps> = ({containerStyle}) => {
   return (
-    <View>
+    <View style={containerStyle}>
       <Image source={logos.logo_tinwin} alt={'sda'} my={10} />
       <View width={'60%'}>
         <Text fontWeight={600} fontSize={30} color={'text.main'}>
