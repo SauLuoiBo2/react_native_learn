@@ -1,7 +1,7 @@
 import {MainLayout} from '@src/components';
-import {View, Text} from 'native-base';
 import React from 'react';
 import {LogoHeader} from '../widget/login';
+import {FormLogin} from '../widget/login/form-login';
 
 export interface LoginScreenProps {}
 
@@ -9,13 +9,12 @@ export const LoginScreen: React.FC<LoginScreenProps> = () => {
   return (
     <MainLayout>
       {/* logo */}
-      <View>
-        <LogoHeader />
-      </View>
+
+      <LogoHeader />
+
       {/* form */}
-      <View>
-        <Text>form</Text>
-      </View>
+
+      <FormLogin />
     </MainLayout>
   );
 };
